@@ -10,14 +10,15 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 // expect(raisedToTheThird([2, 4, 5, -7, 0])).toStrictEqual([8, 64, 125, -343, 0]);
 // Math.pow()) function returns the base to the exponent power
 
-const raisedToTheThird = (arr) => {
+const raisedToTheThird = (arr) => { // We are saying the array is = to raisedToTheThird
   // Solution code here...
-  var newArr = [];
-  for (var i = 0; i < arr.length; i++ ) {
-    newArr.push(Math.pow(arr[i], 3));
+  const newArr = []; // delcaring a variable newArr which is equal to an empty array to pass values 
+  for (var i = 0; i < arr.length; i++ ) { // a tyipical for loop that starts at index 0 and increments through the length of the array
+    newArr.push(Math.pow(arr[i], 3)); // we take the newArr and push it to a feature called Math.pow and within that we take the array at index 0 and raise it to the third power. 
   }
   return newArr;
 };
+// for (var i = 0; i <= 5; i++ )
 
 /* we have the const raisedToTheThird equalling (arr) and then moving that to a function
 next we create a new variable that is the new empty array 
@@ -50,17 +51,17 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 // str is a parameter 
 /* const b = appendTheEnd(a); //this is recursion. A function when it calls itself. */
 
-const appendTheEnd = (str) => {
-  console.log(str);
+const appendTheEnd = (str) => { // we are saying the str is equal to appendTheEnd
+  console.log(str); //a console log to see what we are returning
   // Solution code here...
-  const a = 'This is my story.';
-  const b = ' The end.';
+  const a = 'This is my story.'; // const a is equal to string 'This is my story'
+  const b = ' The end.'; // const b is equal to string 'The end'
   // arr.forEach(function(str) {
   //   result.push(str);
   // })
-  const res = a.concat(b);
+  const res = a.concat(b); // we are saying that we are concatinating a to array b which merges the two
   console.log(res);
-  return res;
+  return res; // returning the results
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -76,8 +77,9 @@ appendFirstToLast(a);
 console.log(a) prints [1, 2, 3, 1]
 ------------------------------------------------------------------------------------------------ */
 
-const appendFirstToLast = (arr) => {
+const appendFirstToLast = (arr) => { // this array is equal to appendFirstToLast and then using a function to create the results
   // Solution code here...
+  arr.push(arr[0]); // now we take the array and push is to the array at index of 0.
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -94,9 +96,18 @@ const octavia = { fullName: 'Octavia Estelle Butler' };
 addBirthYearProperty(octavia, 1947);
 console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 ------------------------------------------------------------------------------------------------ */
+// describe('Testing challenge 4', () => {
+//   test('It should add a property to an object', () => {
+//     const a = { fullName: 'Octavia Butler' };
+//     addBirthYearProperty(a, 1947);
 
-const addBirthYearProperty = (obj, year) => {
+//     expect(a.yearBorn).toStrictEqual(1947);
+//   });
+// });
+
+const addBirthYearProperty = (obj, year) => { // For this one we have the object and the year is equal to addBirthYearProperty
   // Solution code here...
+  obj.yearBorn = year; // what we have done is take the year and say its equal to the object of yearborn
 };
 
 /* ------------------------------------------------------------------------------------------------

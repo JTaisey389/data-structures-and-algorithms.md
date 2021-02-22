@@ -15,9 +15,9 @@ const addTwo = (arr) => { //delcaring a varaible which is a function addTwo whic
 // forEach = what We need at least 1 parameter 
   // Solution code here...
   // Make sure to check spacing for the code because linter will get mad
-  const newArr = [];
+  const newArr = []; // we have the empty array that is equal to the newArr
 
-  arr.forEach(number => {newArr.push(number += 2);
+  arr.forEach(number => {newArr.push(number += 2); // for each number in the array we creat a function for newArr that pushes a number plus and equal to 2
   });
 
   return newArr;
