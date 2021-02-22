@@ -12,19 +12,31 @@ Push each updated animal string into the new array. Return the new array.
 HINT: Look at the tests to see how the callback functions are used.
 
 ------------------------------------------------------------------------------------------------ */
+// describe('Testing challenge 1', () => {
+//   test('It should return an array of uppercase animal names', () => {
+//     const arr = ['BeAr', 'lIon'];
+//     expect(updateAnimal(arr, upper)[0]).toStrictEqual('BEAR');
+//     expect(updateAnimal(arr, upper)[1]).toStrictEqual('LION');
+//   });
+//   test('It should return an array of lowercase animal names', () => {
+//     const arr = ['BeAr', 'lIon'];
+//     expect(updateAnimal(arr, lower)[0]).toStrictEqual('bear');
+//     expect(updateAnimal(arr, lower)[1]).toStrictEqual('lion');
+//   });
+// });
 
-function upper(str) {
-  return str.toUpperCase(); 
+function upper(str) { // we create a function that is upper (str)
+  return str.toUpperCase(); // returning str toUpperCase 
 }
 
-function lower(str) {
-  return str.toLowerCase();
+function lower(str) { // we create a function that is lower (str)
+  return str.toLowerCase();// returning str toUpperCase 
 }
 
-const updateAnimal = (arr, callback) => {
+const updateAnimal = (arr, callback) => {// we are taking the arr and callingback that from the other functions
   // Solution code here...
-  const newArr = [];
-  arr.forEach(each => newArr.push(callback(each)));
+  const newArr = [];// a new array is equal to the empy array
+  arr.forEach(each => newArr.push(callback(each))); // for each part of newArr we push the callback to each.
   return newArr;
 };
 // 
@@ -35,10 +47,15 @@ Write a function called sortNames that takes an array of names and sorts them al
 
 For example: 'Cat' would come before 'apple'
 ------------------------------------------------------------------------------------------------ */
+describe('Testing challenge 2', () => {
+  test('It should return an array of names sorted alphabetically', () => {
+    expect(sortNames(['able', 'Bob'])[0]).toStrictEqual('Bob');
+  });
+});
 
-const sortNames = (arr) => {
+const sortNames = (arr) => { // sortNames is equal to an array
   // Solution code here...
-  const result = arr.sort();
+  const result = arr.sort(); //we are saying that the result of the array needs to be sorted
   return result;
 };
 
@@ -55,9 +72,11 @@ HINT: Beware... JS default is "Lexical" ordering.
 //   });
 // });
 
-const sortNumbers = (arr) => {
+// The sort() method sorts the elements of an array in place and returns the sorted array. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values
+
+const sortNumbers = (arr) => { // we will sortNumber is equall to the array
   // Solution code ..
-  arr.sort((a,b) => {return a - b;});
+  arr.sort((a,b) => {return a - b;}); // we are saying the array will be sorted first by a, then by b and return a - b.
   return arr;
 };
 
@@ -84,10 +103,17 @@ In this alphabetization, capital letters come before lower case letters.
 
 For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
+describe('Testing challenge 5', () => {
+  test('It should sort strings alphabetically', () => {
+    expect(alphabetize(['alphabet', 'Zebra', 'Alphabet', 'carrot'])).toStrictEqual([ 'Alphabet', 'Zebra', 'alphabet', 'carrot']);
+    expect(alphabetize(['alphabet','Alphabet', 'carrot'])).toStrictEqual([ 'Alphabet', 'alphabet', 'carrot']);
+    expect(alphabetize([])).toStrictEqual([]);
+  });
+});
 
-const alphabetize = (arr) => {
+const alphabetize = (arr) => { // we pull the value of alphabetize to = the array and create a function
   // Solution code here...
-  arr.sort();
+  arr.sort(); // the array then sorts the items that are within the area 
   return arr;
 };
 
@@ -103,10 +129,34 @@ Here is an example of the input:
   {name: 'Tote bag', price: 15}
 ];
 ------------------------------------------------------------------------------------------------ */
+// describe('Testing challenge 8', () => {
+//   test('It should sort items by their price', () => {
+//     expect(sortByPrice([
+//       {name: 'Sweatshirt', price: 45},
+//       {name: 'Bookmark', price: 2.50},
+//       {name: 'Tote bag', price: 15}
+//     ])).toStrictEqual([
+//       {name: 'Bookmark', price: 2.50},
+//       {name: 'Tote bag', price: 15},
+//       {name: 'Sweatshirt', price: 45},
+//     ]);
+//     expect(sortByPrice([{price: 12}, {price: 10}])).toStrictEqual([{price: 10}, {price: 12}]);
+//     expect(sortByPrice([])).toStrictEqual([]);
+//   });
+// });
 
 const sortByPrice = (arr) => {
   // Solution code here...
-  arr.sort();
+  function comparing(left, right){
+    if(left.price > right.price){
+      return 1;
+    } else if(left.price < right.price){
+      return -1;
+    } else {
+      return 0;
+    }
+  }
+  arr.sort(comparing);
   return arr;
 };
 

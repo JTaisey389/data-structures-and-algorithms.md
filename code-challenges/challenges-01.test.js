@@ -49,9 +49,9 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 // test('It should return an array with an exclamation point added to each value of the original array', () => {
 //   expect(addExclamation(['hi', 'how', 'are', 'you'])).toStrictEqual(['hi!', 'how!', 'are!', 'you!']);
 
-const allUpperCase = (arr) => { // we are constraining the letters to alluppercase to the array
+const allUpperCase = (arr) => { // we are constraining the letters to alluppercase to the array. This is where we say allUpperCase is = to the arr
   // solution goes here 
-  const result = []; // nexr we constrain and pass the results into the empy array
+  const result = []; // we pass information into the empty array
   // work goes here
   arr.forEach(greeting => { // with the array we then say for each greeting and passing that through a function
     const greetingUpperCase = greeting.toUpperCase(); // within out function we delcare a contrain to greetingUpperUpercase and do a comparison of greeting.toUpperCase
@@ -70,13 +70,26 @@ Then, write a function named `speaker` that takes in an array of strings and a c
 
 Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array. 
 ------------------------------------------------------------------------------------------------ */
+// xdescribe('Testing challenge 4', () => {
+//   test('It should provide an array of strings, that get uppercased, and a "!" at the end', () => {
+//     expect(speaker(['hello', '301', 'students'], greeting)).toStrictEqual(['HELLO!', '301!', 'STUDENTS!']);
+//   });
+// });
 
-const greeting = (word) => {
+//A callback is a function passed as an argument to another function.
+const greeting = (word) => { //greeting is equal to word
   // Solution code here...
+  return word.toUpperCase(); // We take the word which is equal to the greenting and change that to .toUpperCase
+
 };
 
-const speaker = (words, callback) => {
+const speaker = (words, callback) => { // speaker is equal to words and callback
+  const result = []; // the results are equal to the empty array
+  words.forEach(word => { // For each words we want to take the word from the function earlier
+    result.push(`${callback(word)}!`); // now we call the result and push that to the callback of word
+  });
   // Solution code here...
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -94,13 +107,24 @@ Within the addNumbers function, invoke the callback function as many times as ne
 
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
+// describe('Testing challenge 5', () => {
+//   test('It should add the number 8 to the array five times', () => {
+//     expect(addNumbers(8, [], 5, addValues)).toStrictEqual([8, 8, 8, 8, 8]);
+//     expect(addNumbers(8, [], 5, addValues).length).toStrictEqual(5);
+//   });
+// });
 
-const addValues = (arr, value) => {
+const addValues = (arr, value) => { // The addValues is = to arr and values
   // Solution code here...
+  arr.push(value); //we are taking arr and pushing it to the value
 };
 
-const addNumbers = (num, arr, times, callback) => {
+const addNumbers = (num, arr, times, callback) => { // the add numbers is equal to num, the arr, the times and the callback
   // Solution code here...
+  for (var i = 0; i < times; i++) { // a for loop to itterate through which is less than the number of times
+    callback(arr, num); // we call back the arr and num
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -120,9 +144,24 @@ The inventory is formatted like this:
 
 This function should use forEach to populate your grocery list based on the store's inventory. If the item is available, add it to your list. Return the final list.
 ------------------------------------------------------------------------------------------------ */
+// describe('Testing challenge 6', () => {
+//   const inventory = [{ name: 'apples', available: true }, { name: 'pears', available: true }, { name: 'oranges', available: false }, { name: 'bananas', available: true }, { name: 'blueberries', available: false }];
 
-const createList = (availableItems) => {
+//   test('It should only add the available items to the list', () => {
+//     expect(createList(inventory)).toStrictEqual(['apples', 'pears', 'bananas']);
+//     expect(createList(inventory).length).toStrictEqual(3);
+//   });
+// });
+
+const createList = (availableItems) => { // create list is = to the availableItems
   // Solution code here...
+  const groceryList = []; // the groceryList is equal to an empty array
+  availableItems.forEach(inventory => { // We check to see for each item of the available inventory
+    if(inventory.available === true){ // if the inventory is available this strict equals to true
+      groceryList.push(inventory.name); //now we take the grocerylist and push it to the inventory.name
+    }
+  });
+  return groceryList;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -172,20 +211,20 @@ describe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should provide an array of strings, that get uppercased, and a "!" at the end', () => {
     expect(speaker(['hello', '301', 'students'], greeting)).toStrictEqual(['HELLO!', '301!', 'STUDENTS!']);
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should add the number 8 to the array five times', () => {
     expect(addNumbers(8, [], 5, addValues)).toStrictEqual([8, 8, 8, 8, 8]);
     expect(addNumbers(8, [], 5, addValues).length).toStrictEqual(5);
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   const inventory = [{ name: 'apples', available: true }, { name: 'pears', available: true }, { name: 'oranges', available: false }, { name: 'bananas', available: true }, { name: 'blueberries', available: false }];
 
   test('It should only add the available items to the list', () => {
@@ -194,7 +233,7 @@ xdescribe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
   test('It should print out messages or numbers', () => {
