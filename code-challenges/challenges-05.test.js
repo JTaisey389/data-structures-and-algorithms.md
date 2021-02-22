@@ -11,8 +11,9 @@ Write a function called sortStarWarsCharacters that sorts the characters in the 
 //     expect(sortStarWarsCharacters(starWarsPeople)[2]['height']).toStrictEqual('96');
 //   })
 // });
+// The parseInt() function parses a string argument and returns an integer of the specified radix
 
-let starWarsPeople = [
+let starWarsPeople = [ // this is letting something be equal to something. Name, height and eye color could be targeted with vanilla javascript. 
   {
     "name": "C-3PO",
     "height": "167",
@@ -30,14 +31,14 @@ let starWarsPeople = [
   }
 ];
 
-const sortStarWarsCharacters = (starWarsArr) => {
+const sortStarWarsCharacters = (starWarsArr) => { //starWarsArr is equal to sortStarWarnsCharecters
   // Solution code here...
-  starWarsArr.sort((a,b) => {
-    if(parseInt(a.height) > parseInt(b.height)){
-      return -1;
-    }else if (parseInt(a.height) > parseInt(a.height)){
+  starWarsArr.sort((a,b) => { // now we sort position a and b of the starWarsArr
+    if(parseInt(a.height) > parseInt(b.height)){ // If a.height is greater than b.height
+      return -1; // we return a negative 1
+    }else if (parseInt(a.height) > parseInt(a.height)){ //other wise we return 1
       return 1;
-    } else {
+    } else { // or we return 0
       return 0;
     }
   });
@@ -54,10 +55,10 @@ Write a function named removeThree that takes an index and an array. The functio
 //     expect(removeThree(2, [1, 2, 3, 4, 5, 6, 7, 8])).toStrictEqual([1, 2, 6, 7, 8]);
 //   });
 // });
-
-const removeThree = (idx, arr) => {
+// The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements
+const removeThree = (idx, arr) => { // idx, and arr is equal to removeThree
   // Solution code here...
-  arr.splice(idx,3);
+  arr.splice(idx,3); // we are splicing the array at index 3
   console.log(arr);
   return arr;
 
@@ -68,6 +69,7 @@ CHALLENGE 3
 
 Write a function named joinArray that takes an array and joins all of the elements together in one string on a space.
 ------------------------------------------------------------------------------------------------ */
+// The join() method creates and returns a new string by concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string. If the array has only one item, then that item will be returned without using the separator.
 
 describe('Testing challenge 3', () => {
   test('It should join an array', () => {
@@ -75,9 +77,9 @@ describe('Testing challenge 3', () => {
   });
 });
 
-const joinArray = (arr) => {
+const joinArray = (arr) => { // the arr is equal to joinArray
   // Solution code here...
-  return arr.join(' ');
+  return arr.join(' '); // we return the arr.join into an empty string
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -92,12 +94,13 @@ Your function should use slice within a loop and return an array of each success
 For example, if the input is 'Welcome', the output will be:
 ['Welcome', 'elcome', 'lcome', 'come', 'ome', 'me', 'e', ''].
 ------------------------------------------------------------------------------------------------ */
+// The slice() method returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included) where start and end represent the index of items in that array. The original array will not be modified.
 
-const howMuchPencil = (str) => {
-  let result = [];
+const howMuchPencil = (str) => { // str is equal to howMuchPencil
+  const result = []; //now we take an empty array which is equal to the result
   // Solution code here...
-  for (var i = 0; i <= str.length; i++){
-  result.push(str.slice(i));
+  for (var i = 0; i <= str.length; i++){ // a for loop that increments through to the str.length
+  result.push(str.slice(i)); // we push the result into the str and slice that into i. 
   }
   return result;
 };
@@ -118,11 +121,11 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 //   });
 // });
 
-const wordsToCharList = (arr) => {
+const wordsToCharList = (arr) => { // the arr is equal to wordsToChartList is = to arr
   // Solution code here...
-  let result = [];
-  for (var i = 0; i < arr.length; i++){
-    result.push(arr.slice(i, i+1));
+  let result = []; // an empty array is equal to the result
+  for (var i = 0; i < arr.length; i++){ // a for loop that increments through the arr.length 
+    result.push(arr.slice(i, i+1)); // we push the result and slice it at i and increment with the slice 1 time each. 
   }
   return result;
 };
@@ -170,14 +173,14 @@ const gruffaloCrumble = {
 };
 
 
-const listFoods = (recipe) => {
-  let result = [];
+const listFoods = (recipe) => { //recipe is equal to the list of foods
+  const result = []; // the empty array equals the result
   // Solution code here...
-  recipe.ingredients.forEach( value => {
-    let a = value.indexOf(' ');
-    let b = value.indexOf(' ', a+1);
+  recipe.ingredients.forEach( value => { // for each of the ingredients of the recipe we take the value 
+    const a = value.indexOf(' '); // value of indexOf the empty string is equal to a
+    const b = value.indexOf(' ', a+1); // value of indexOf the empty string and adds a plus an increment of one. This will tack on b to the end of a
 
-    result.push(value.slice(b+1));
+    result.push(value.slice(b+1));// we push the results of value.slice to b + 1 
   });
   return result;
 };
