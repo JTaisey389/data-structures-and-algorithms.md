@@ -19,11 +19,11 @@ Becomes:
 ------------------------------------------------------------------------------------------------ */
 
 function transformToLis(obj){
-    // Solution code here... 
-    let result = [];
-    for(let value in obj){
-      result.push(`<li>${value}: ${obj[value]}</li>`);
-    }
+  // Solution code here... 
+  let result = [];
+  for(let value in obj){
+    result.push(`<li>${value}: ${obj[value]}</li>`);
+  }
   return result;
 }
 
