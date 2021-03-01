@@ -17,7 +17,7 @@ Write a function named returnTen, takes in a string and uses split and splice to
 function returnTen(str){ // We call the function 
   // Solution code here...
   const result = str.split('').splice(-10); //we split the array and then spice it at -10
-  console.log(result);
+  // console.log(result);
   return result;
 }
 
@@ -49,11 +49,10 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 
 const containsAnd = (arr) => {
   // Solution code here...
-  const result = arr.filter(value => {
-    if (typeof value(word.match);
-  });
-  return result;
+  return arr.filter(word => word.match(/and/g)); //We use regex to match a specific word or seires of items.
 };
+
+// Credit to Lydia she explained what this one was doing. It kinda makes sense 
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -65,6 +64,7 @@ For example, oddValues([1,2,3]) returns [1,3].
 
 const oddValues = (arr) => {
   // Solution code here...
+  return arr.filter(index => !(index % 2 === 0));// return the arr.filter at the index and call a funtion to remove index of 2 if 2 is strict equals to 0. 
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -137,7 +137,7 @@ const snorlaxData = {
 const getBaseStatGreaterThan = (arr, minBaseStat) => { // arr and minBaseStat are = to getBaseStatGreaterThan
   // Solution code here...
   const result = arr.filter((value, index, array) => { // we want to filter the results of value, index, and array
-    console.log (value, index, array);
+    // console.log (value, index, array);
     if (value.baseStat > minBaseStat) return true; // if the first value.baseStat is greater than the minBaseStat we return as true. If it is not greater than we return false
     return false;
 

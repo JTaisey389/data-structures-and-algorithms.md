@@ -24,10 +24,14 @@ Returns: ['dyoll', 'eimaj'];
 
 const getNames = (arr) => {
   // Solution code here...
-  const reversed = arr.reverse((value)=>{
-    return value.map;
+  var newArr = [];
+  arr.forEach(obj => {
+    newArr.push(reversestring(obj.name));
   });
-  return reversed;
+  function reversestring(str){
+    return str.split('').reverse().join('');
+  }
+  return newArr;
 };
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -41,7 +45,10 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 
 const count = (target, input) => {
   // Solution code here...
-};
+  return input.reduce((int, set) => {
+   int += set.reduce 
+  })
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -53,9 +60,9 @@ You may want to use filter, map, or reduce for this problem, but are not require
 For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 
-const totalSum = (input) => {
-  // Solution code here...
-};
+// const totalSum = (input) => {
+//   // Solution code here...
+// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -69,9 +76,9 @@ This function should then raise 2 to the power of the resulting numbers, returni
 For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
-const divisibleByFiveTwoToThePower = (input) => {
-  // Solution code here...
-};
+// const divisibleByFiveTwoToThePower = (input) => {
+//   // Solution code here...
+// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 
