@@ -8,10 +8,15 @@ using the 'reduce' method.
 
 E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
+
+// The Math.max() function returns the largest of the zero or more numbers given as input parameters, or NaN if any parameter isn't a number and can't be converted into one.
 const maxInArray = (arr) => {
   // Solution code here...
+  return arr.reduce((int, set) => { // we take the arr.reduce and pass it int and set
+    return Math.max(int, set); //we return int and set and apply the Math.max 
+  });
 };
-
+//Zach helped explain this and walked me through a good portion
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -28,6 +33,11 @@ return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
   // Solution code here...
+  return matrix.reduce((int, set) => { // we return matrix.reduce at values of int and set
+    return Math.max(int, (set.reduce((int2, set2) => {
+      return Math.max(int2, set2);
+    }, 0)));
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
