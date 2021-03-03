@@ -64,9 +64,15 @@ You may want to use filter, map, or reduce for this problem, but are not require
 For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 
-// const totalSum = (input) => {
-//   // Solution code here...
-// };
+const totalSum = (input) => { // totalSum is = to the input 
+  // Solution code here...
+  return input.reduce((int,set) => { //we return the input and reduce the value by passing it through int and set
+    const sumVal = set.reduce((int2, curVal2) => { // we construct a sumVal which is equal to set.reduce, The values of set.reduce are applied to int2 and curVal2.
+      return int2 += curVal2; // Now we return the int2 which is added to curVal2 at index zero
+    }, 0);
+    return int += sumVal; // now we pass the total of the input to the sumVal function and add them together at index 0
+  }, 0);
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -80,9 +86,17 @@ This function should then raise 2 to the power of the resulting numbers, returni
 For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
-// const divisibleByFiveTwoToThePower = (input) => {
-//   // Solution code here...
-// };
+const divisibleByFiveTwoToThePower = (input) => {
+  // Solution code here...
+  return input.reduce((int, set) => {
+    int.push(set.reduce ((int2, set2) => {
+      if(set2 % 5 === 0 && typeof set2 ==='number'){
+        int2.push(Math.pow(2, set2));
+      }
+      return int2;
+    }, []));
+  }, []);
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 
