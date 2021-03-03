@@ -54,8 +54,12 @@ For example:
 
 return: 35
 ------------------------------------------------------------------------------------------------ */
-const totalSum = (matrix) => {
+const totalSum = (matrix) => { // totalSum is equal to the word matrix
   // Solution code here...
+  const results = matrix.reduce((int, num) => { // now we take the matric and reduce it's value at int and number. These values are equal to results
+    return int.concat(num); //next we take the int and concatinate the number (ie add())
+  }, []);//Pass the value through an empty array
+  return results.reduce((int, num) => int + num, 0); //now we can return the results.reduce with the values of int and num, which are passed through as a function to add int and num together at index of 0.
 };
 
 
@@ -83,7 +87,15 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
   // Solution code here...
-
+  const result = []; // Create an empty array to pass values
+  for (let i = 0; i < hoursOpen.length; i++) { //create a for loop to increment through the values at the index of 0, this could also be acheived with a forEach. This is for the hours the stores are open
+    let total = 0; // the total num of cookies equals zero
+    for (var j = 0; j < stores.length; j++) { // create a nested for loop to increment over the stores at index of zero and go through the length of the stores
+      total += stores[j][i]; //we concatinate the total of the stores from each [j] and [i]
+    }
+    result.push(total);// we take the results of 90 and push that into the total on 94
+  }
+  return result; // we return the results that we have generated
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -95,9 +107,34 @@ Here is sample data for the 9:00 sales: { sales: '88 cookies', time: '9 a.m.' }.
 
 Write a function named salesData that uses forEach to iterate over the hourlySales array and create an object for each hour. Return an array of the formatted data.
 ------------------------------------------------------------------------------------------------ */
+// describe('Testing challenge 5', () => {
+//   test('It should create an object of data for each store', () => {
+//     expect(salesData(hoursOpen, grandTotal(cookieStores))).toStrictEqual([
+//       { sales: '88 cookies', time: '9 a.m.' },
+//       { sales: '153 cookies', time: '10 a.m.' },
+//       { sales: '252 cookies', time: '11 a.m.' },
+//       { sales: '286 cookies', time: '12 p.m.' },
+//       { sales: '139 cookies', time: '1 p.m.' },
+//       { sales: '161 cookies', time: '2 p.m.' },
+//       { sales: '145 cookies', time: '3 p.m.' },
+//       { sales: '232 cookies', time: '4 p.m.' },
+//       { sales: '276 cookies', time: '5 p.m.' },
+//       { sales: '207 cookies', time: '6 p.m.' },
+//       { sales: '161 cookies', time: '7 p.m.' },
+//       { sales: '169 cookies', time: '8 p.m.' }
+//     ]);
+
+//     expect(salesData(hoursOpen, grandTotal(cookieStores)).length).toStrictEqual(hoursOpen.length);
+//   });
+// });
 
 const salesData = (hours, data) => {
   // Solution code here...
+  const results = []; // create an empty array that is equal to results. We pass values into the array
+  hours.forEach ((time, i) => { //we pass the hours into a ForEach and give it the values of time and i
+    results.push({sales: `${data[i]} cookies`, time: `${time}`}); // we take the results of of the forEach and push the them so sales and time by using a template literals method to simplify how we add together values. We are taking at index of i for the cookies which are pushed the results. Secondly we have the time which is also pushed results to the time value. 
+  });
+  return results;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -105,6 +142,11 @@ CHALLENGE 6
 
 Write a function named howManyTreats that will return the quantity of treats you need to pick up from the pet store today from this array.
 ------------------------------------------------------------------------------------------------ */
+// describe('Testing challenge 6', () => {
+//   test('It should return the number 24', () => {
+//     expect(howManyTreats(errands)).toStrictEqual(24);
+//   });
+// });
 
 const errands = [
   {
@@ -122,8 +164,10 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  // Solution code here...
+  return arr[2].items[1].quantity; //we return the arr at index of 2 and then go to the items and pass  that value at index of 1 for the quantity
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
