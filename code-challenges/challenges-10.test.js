@@ -24,14 +24,7 @@ Returns: ['dyoll', 'eimaj'];
 
 const getNames = (arr) => {
   // Solution code here...
-  var newArr = [];
-  arr.forEach((obj) => {
-    newArr.push(reversestring(obj.name));
-  });
-  function reversestring(str) {
-    return str.split(' ').reverse().join(' ');
-  }
-  return newArr;
+  return arr.map( people => people.name.split('').reverse().join(''));
 };
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -88,14 +81,13 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
-  return input.reduce((int, set) => {
-    int.push(set.reduce ((int2, set2) => {
-      if(set2 % 5 === 0 && typeof set2 ==='number'){
-        int2.push(Math.pow(2, set2));
-      }
-      return int2;
-    }, []));
-  }, []);
+  return input.map(arrayofNumbers => {
+    return arrayofNumbers.filter(number => {
+      return number % 5 === 0 && typeof(number) === 'number';
+    }).map(power => {
+      return Math.pow(2, power);
+    });
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -164,6 +156,11 @@ let starWarsData = [
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
+  return data.filter(humans => {
+    return humans.gender === 'female' || humans.gender === 'male';
+  }).map(charecter => {
+    return charecter.name;
+  }).join(' and ');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -174,6 +171,16 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 
 let findShortest = (data) => {
   // Solution code here...
+  function compare(left, right){
+    if(left.height < right.height){
+      return 1;
+    } else if(left.height > right.height){
+      return -1;
+    } else {
+      return 0;
+    }
+  }
+  return data.sort(compare)[0].name;
 };
 
 /* ------------------------------------------------------------------------------------------------
