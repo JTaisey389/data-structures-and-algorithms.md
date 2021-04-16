@@ -12,9 +12,6 @@ Write a function called addTwo that takes in an array and adds two to every valu
 // });
 
 const addTwo = (arr) => { //delcaring a varaible which is a function addTwo which take in an array as a parameter.
-// forEach = what We need at least 1 parameter 
-  // Solution code here...
-  // Make sure to check spacing for the code because linter will get mad
   const newArr = []; // we have the empty array that is equal to the newArr
 
   arr.forEach(number => {newArr.push(number += 2); // for each number in the array we creat a function for newArr that pushes a number plus and equal to 2
@@ -166,7 +163,6 @@ const citiesAtoJ = (arr) => {
   });
   return cities;
 };
-// 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
 

@@ -100,6 +100,7 @@ const howMuchPencil = (str) => { // str is equal to howMuchPencil
   const result = []; //now we take an empty array which is equal to the result
   // Solution code here...
   for (var i = 0; i <= str.length; i++){ // a for loop that increments through to the str.length
+  // eslint-disable-next-line indent
   result.push(str.slice(i)); // we push the result into the str and slice that into i. 
   }
   return result;

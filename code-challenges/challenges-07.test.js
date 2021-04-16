@@ -12,7 +12,6 @@ Write a function named replaceZeros that, given a string, uses Regex to replace 
 // });
 
 const replaceZeros = (string) => {
-  // Solution code here...
   const regex = /0+/gm;
   return string.replace(regex , 'zero' );
 };
@@ -41,7 +40,6 @@ Write a function named addOne that, given an array of numbers, uses map to retur
 // The map() method creates a new array populated with the results of calling a provided function on every element in the calling array. A very condensed for loop
 
 const addOne = (arr) => { // arr is equal to addOne
-  // Solution code here...
   const output = arr.map((value) => { // arr.map is equal to const output (value)
     return value +1; // we return the value plus 1
   });
@@ -60,7 +58,6 @@ Write a function named addQuestion that, given an array of strings, uses map to 
 // });
 // Three Parameters, Value, Index or an Array. It can be all three
 const addQuestion = (arr) => {
-  // Solution code here...
   const output = arr.map((value) => {
     return value +'?';
   });
@@ -78,7 +75,6 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 ------------------------------------------------------------------------------------------------ */
 
 const forLoopTwoToThe = (arr) => {
-  // Solution code here...
   const output = [];
   arr.map(incriment => {
     output.push(Math.pow(2, incriment));
@@ -93,7 +89,6 @@ Write a function named forEachTwoToThe that produces the same output as your for
 ------------------------------------------------------------------------------------------------ */
 
 const forEachTwoToThe = (arr) => {
-  // Solution code here...
   const result = [];
   arr.forEach(incriment => {
     result.push(Math.pow(2, incriment));
@@ -108,7 +103,6 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
-  // Solution code here...
   const result = [];
   arr.map(incriment => {
     result.push(Math.pow(2, incriment));
@@ -127,7 +121,6 @@ For example: charCode(['h','i']) returns [104, 105].
 ------------------------------------------------------------------------------------------------ */
 
 const charCode = (arr) => {
-  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -141,7 +134,6 @@ For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 ------------------------------------------------------------------------------------------------ */
 
 const evenOdd = (arr) => {
-  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -187,7 +179,6 @@ const snorlaxAbilities = {
 };
 
 const extractAbilities = (arr) => {
-  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -234,7 +225,6 @@ const snorlaxStats = {
 };
 
 const extractStats = (arr) => {
-  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------

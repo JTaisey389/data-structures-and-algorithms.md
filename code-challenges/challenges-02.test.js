@@ -11,9 +11,8 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 // Math.pow()) function returns the base to the exponent power
 
 const raisedToTheThird = (arr) => { // We are saying the array is = to raisedToTheThird
-  // Solution code here...
   const newArr = []; // delcaring a variable newArr which is equal to an empty array to pass values 
-  for (var i = 0; i < arr.length; i++ ) { // a tyipical for loop that starts at index 0 and increments through the length of the array
+  for (var i = 0; i < arr.length; i++ ) { // a typical for loop that starts at index 0 and increments through the length of the array
     newArr.push(Math.pow(arr[i], 3)); // we take the newArr and push it to a feature called Math.pow and within that we take the array at index 0 and raise it to the third power. 
   }
   return newArr;
@@ -32,33 +31,13 @@ CHALLENGE 2
 Write a function that appends ' The end.' to a string, and returns the modified string. The original source string should not be modified.
 
 ------------------------------------------------------------------------------------------------ */
-// describe('Testing challenge 2', () => {
-//   test('It should append without modifying the oiginal', () => {
-//     const a = 'This is my story.';
-//     const b = appendTheEnd(a);
-
-//     expect(a).toStrictEqual('This is my story.');
-//     expect(b).toStrictEqual('This is my story. The end.');
-//   });
-// });
-
-// const result = []; // we then say var result is equal to the empty array
-//   // work goes here; =
-//   arr.forEach(function(number) { // next we take the array for each number in that function
-//     result.push(number +1); // this will then push the results of the number and add 1
-//   });
-//   return result;
-// str is a parameter 
 /* const b = appendTheEnd(a); //this is recursion. A function when it calls itself. */
 
 const appendTheEnd = (str) => { // we are saying the str is equal to appendTheEnd
-  console.log(str); //a console log to see what we are returning
-  // Solution code here...
+  console.log(str); //a console log to see what we are returning.
   const a = 'This is my story.'; // const a is equal to string 'This is my story'
   const b = ' The end.'; // const b is equal to string 'The end'
-  // arr.forEach(function(str) {
-  //   result.push(str);
-  // })
+
   const res = a.concat(b); // we are saying that we are concatinating a to array b which merges the two
   console.log(res);
   return res; // returning the results
@@ -77,8 +56,7 @@ appendFirstToLast(a);
 console.log(a) prints [1, 2, 3, 1]
 ------------------------------------------------------------------------------------------------ */
 
-const appendFirstToLast = (arr) => { // this array is equal to appendFirstToLast and then using a function to create the results
-  // Solution code here...
+const appendFirstToLast = (arr) => { // this array is equal to appendFirstToLast and then using a function to create the results.
   arr.push(arr[0]); // now we take the array and push is to the array at index of 0.
 };
 
@@ -96,17 +74,8 @@ const octavia = { fullName: 'Octavia Estelle Butler' };
 addBirthYearProperty(octavia, 1947);
 console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 ------------------------------------------------------------------------------------------------ */
-// describe('Testing challenge 4', () => {
-//   test('It should add a property to an object', () => {
-//     const a = { fullName: 'Octavia Butler' };
-//     addBirthYearProperty(a, 1947);
 
-//     expect(a.yearBorn).toStrictEqual(1947);
-//   });
-// });
-
-const addBirthYearProperty = (obj, year) => { // For this one we have the object and the year is equal to addBirthYearProperty
-  // Solution code here...
+const addBirthYearProperty = (obj, year) => { // For this one we have the object and the year is equal to addBirthYearProperty.
   obj.yearBorn = year; // what we have done is take the year and say its equal to the object of yearborn
 };
 
@@ -134,7 +103,6 @@ console.log(people[1].isAuthor) prints true
 // });
 
 const setStatusAsAuthor = (people) => {
-  // Solution code here...
   // people[0].isAuthor = true;
   // people[1].['isAuthor'] = true;
   // people[3].isAuthor = true;
@@ -159,8 +127,7 @@ append(a, b);
 console.log(a) prints [1, 2, 3, 4]
 ------------------------------------------------------------------------------------------------ */
 
-const append = (arr1, arr2) => {
-  // Solution code here...
+const append = (arr1, arr2) => {.
 
 };
 
@@ -209,7 +176,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-describe('Testing challenge 5', () => {
+xdescribe('Testing challenge 5', () => {
   test('It should add a property to every object in an array', () => {
     const a = [{ fullName: 'Octavia Butler' }, { fullName: 'Ray Bradbury' }, { fullName: 'Kurt Vonnegut' }];
     setStatusAsAuthor(a);
