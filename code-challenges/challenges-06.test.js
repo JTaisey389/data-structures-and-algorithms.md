@@ -62,7 +62,6 @@ let characters = [
 ];
 
 const sortByChildren = (charArray) => { // charArray is equal to sortByChildren
-  // Solution code here...
   charArray.sort((a, b) => { // we want to sort A and B
     if (a.children.length < b.children.length) { // if a.children.length is less than b.children.length we return -1. 
       return -1;
@@ -110,7 +109,6 @@ const courseInfo = {
 };
 
 const getCourseKeys = (obj) => {
-  // Solution code here...
   return Object.keys(obj);
 };
 // Object.keys()
@@ -129,13 +127,12 @@ Write a function named checkValues that takes in an object and a value and retur
 //   });
 // });
 const checkValues = (obj, value) => {
-  // Solution code here...
   const values = Object.values(obj);//[301]
   for (let i = 0; i < values.length; i++){
     if (value === values[i]) { // we access the array at index of i 
       return true;
-    } 
-  } 
+    }
+  }
   return false;
 };
 
@@ -169,7 +166,6 @@ HR has asked you to change the data to make it easier to print so that it looks 
 //   });
 // });
 const updateNumbers = (obj) => { // object is equal to updateNumbers
-  // Solution code here...
   const results = []; // create an empty array
   Object.entries(obj).forEach(newArr => { // use the method Object.entries for ear of new items in the array 
     let newVar = newArr.join(': '); // now we join the new array
@@ -192,7 +188,6 @@ Write a function named getHouses that returns a new array containing the names o
 
 const getHouses = (arr) => { // array is equal to getHouses 
   let houses = []; // we have an empty array equal to houses
-  // Solution code here...
   for (let index in arr) // for let index in arr
     houses.push(arr[index].house); //we take the houses and push to the arr of index
   return houses;
@@ -220,7 +215,6 @@ hasChildrenValues(characters, 'Sansa') will return false
 // });
 
 const hasChildrenValues = (arr, character) => { // arr and charecter are equal to hasChildrenValues
-  // Solution code here...
   for (let index in arr) { //let index in arr 
     if (arr[index].children.length > 0 && character === arr[index].name) { // if array index of .chlidren.length is greater than 0 and charecter is strict equals to array  index.name
       return true;
@@ -229,7 +223,7 @@ const hasChildrenValues = (arr, character) => { // arr and charecter are equal t
   return false;
 }; //Credit to Zach for assisting
 
-  /* ------------------------------------------------------------------------------------------------
+/* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
 
 Write a function named hasChildrenEntries that is similar to your hasChildrenValues function from challenge 4, but uses the data's entries instead of its values.
@@ -238,7 +232,6 @@ The input and output of this function are the same as the input and output from 
 ------------------------------------------------------------------------------------------------ */
 
   // const hasChildrenEntries = (arr, character) => {
-  // Solution code here...
   // for (let index in arr) {
   //   if (arr[index].children)
 //   }
@@ -251,7 +244,6 @@ Write a function named totalCharacters that takes in an array and returns the nu
 ------------------------------------------------------------------------------------------------ */
 
 const totalCharacters = (arr) => {
-  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -266,7 +258,6 @@ For example: [{ house: 'Stark', members: 7 }, { house: 'Arryn', members: 3 }, ..
 
 const houseSize = (arr) => {
   const sizes = [];
-  // Solution code here...
   return sizes;
 };
 
@@ -290,7 +281,6 @@ const deceasedSpouses = ["Catelyn", "Lysa", "Robert", "Khal Drogo", "Alerie"];
 
 const houseSurvivors = (arr) => {
   const survivors = [];
-  // Solution code here...
   return survivors;
 };
 

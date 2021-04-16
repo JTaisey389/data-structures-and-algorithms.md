@@ -10,9 +10,7 @@ Use `forEach` to loop over the input array and work with each value.  Push the n
 // expect(addOne([1, 2, 3, 4, 5])).toStrictEqual([2, 3, 4, 5, 6]);
 
 const addOne = (arr) => { // what we are saying is var addOne to the array 1,2,3,4,5.
-  // solution to the code goes here 
   const result = []; // we then say var result is equal to the empty array
-  // work goes here; =
   arr.forEach(function(number) { // next we take the array for each number in that function
     result.push(number +1); // this will then push the results of the number and add 1
   });
@@ -30,9 +28,7 @@ Use `forEach` to loop over the input array. Modify each string, and add the upda
 
 // expect(addExclamation(['hi', 'how', 'are', 'you'])).toStrictEqual(['hi!', 'how!', 'are!', 'you!']);
 const addExclamation = (arr) => { //we are saying const to add an exclamation poin to the array
-  // Solution code here...
-  const result = []; //we want the const results to be passed into the array
-  // Work goes here 
+  const result = []; //passing the results into an empty array
   arr.forEach(function(greetwith){ //now we have the array for each greetwith to pass into the function
     result.push(greetwith +'!'); //then we take the reslut and push to the greetwith and add the exclamation point
   });
@@ -50,9 +46,7 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 //   expect(addExclamation(['hi', 'how', 'are', 'you'])).toStrictEqual(['hi!', 'how!', 'are!', 'you!']);
 
 const allUpperCase = (arr) => { // we are constraining the letters to alluppercase to the array. This is where we say allUpperCase is = to the arr
-  // solution goes here 
   const result = []; // we pass information into the empty array
-  // work goes here
   arr.forEach(greeting => { // with the array we then say for each greeting and passing that through a function
     const greetingUpperCase = greeting.toUpperCase(); // within out function we delcare a contrain to greetingUpperUpercase and do a comparison of greeting.toUpperCase
     result.push(greetingUpperCase);// now we take the result and push it to the greeting to uppercase 
@@ -78,9 +72,7 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 
 //A callback is a function passed as an argument to another function.
 const greeting = (word) => { //greeting is equal to word
-  // Solution code here...
   return word.toUpperCase(); // We take the word which is equal to the greenting and change that to .toUpperCase
-
 };
 
 const speaker = (words, callback) => { // speaker is equal to words and callback
@@ -88,7 +80,6 @@ const speaker = (words, callback) => { // speaker is equal to words and callback
   words.forEach(word => { // For each words we want to take the word from the function earlier
     result.push(`${callback(word)}!`); // now we call the result and push that to the callback of word
   });
-  // Solution code here...
   return result;
 };
 
@@ -115,12 +106,10 @@ Return the modified array.
 // });
 
 const addValues = (arr, value) => { // The addValues is = to arr and values
-  // Solution code here...
   arr.push(value); //we are taking arr and pushing it to the value
 };
 
 const addNumbers = (num, arr, times, callback) => { // the add numbers is equal to num, the arr, the times and the callback
-  // Solution code here...
   for (var i = 0; i < times; i++) { // a for loop to itterate through which is less than the number of times
     callback(arr, num); // we call back the arr and num
   }
@@ -154,7 +143,6 @@ This function should use forEach to populate your grocery list based on the stor
 // });
 
 const createList = (availableItems) => { // create list is = to the availableItems
-  // Solution code here...
   const groceryList = []; // the groceryList is equal to an empty array
   availableItems.forEach(inventory => { // We check to see for each item of the available inventory
     if(inventory.available === true){ // if the inventory is available this strict equals to true
@@ -179,7 +167,6 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------

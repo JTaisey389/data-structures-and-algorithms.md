@@ -132,7 +132,7 @@ const salesData = (hours, data) => {
   // Solution code here...
   const results = []; // create an empty array that is equal to results. We pass values into the array
   hours.forEach ((time, i) => { //we pass the hours into a ForEach and give it the values of time and i
-    results.push({sales: `${data[i]} cookies`, time: `${time}`}); // we take the results of of the forEach and push the them so sales and time by using a template literals method to simplify how we add together values. We are taking at index of i for the cookies which are pushed the results. Secondly we have the time which is also pushed results to the time value. 
+    results.push({sales: `${data[i]} cookies`, time: `${time}`}); // we take the results of of the forEach and push the them so sales and time by using a template literals method to simplify how we add together values. We are taking at index of i for the cookies which are pushed the results. Secondly we have the time which is also pushed results to the time value.
   });
   return results;
 };

@@ -15,7 +15,6 @@ Write a function named returnTen, takes in a string and uses split and splice to
 // });
 
 function returnTen(str){ // We call the function 
-  // Solution code here...
   const result = str.split('').splice(-10); //we split the array and then spice it at -10
   // console.log(result);
   return result;
@@ -30,7 +29,6 @@ For example, typeNum([1, 'bob' ,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const typeNum = (arr) => {
-  // Solution code here...
   const result = arr.filter(value => {
     if (typeof value === 'number'){
       return value;
@@ -48,7 +46,6 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 ------------------------------------------------------------------------------------------------ */
 
 const containsAnd = (arr) => {
-  // Solution code here...
   return arr.filter(word => word.match(/and/g)); //We use regex to match a specific word or seires of items.
 };
 
@@ -63,7 +60,6 @@ For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const oddValues = (arr) => {
-  // Solution code here...
   return arr.filter(index => !(index % 2 === 0));// return the arr.filter at the index and call a funtion to remove index of 2 if 2 is strict equals to 0. 
 };
 
@@ -79,7 +75,14 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 
 const filterStringsWithVowels = (arr) => {
-  // Solution code here...
+  const newArr = arr.filter(word => { // newArr filters word
+    if (word.match(/[aeiouAEIOU]/g)){ // we now want to find the words to match a specific set out vowels
+      return true;
+    } else {
+      return false;
+    }
+  });
+  return newArr;
 };
 
 
@@ -92,7 +95,14 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
-  // Solution code here...
+  const newArr = arr.filter( num => { 
+    if (!forbiddenValues.includes(num)){
+      return true;
+    } else {
+      return false;
+    }
+  });
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -135,7 +145,6 @@ const snorlaxData = {
 };
 
 const getBaseStatGreaterThan = (arr, minBaseStat) => { // arr and minBaseStat are = to getBaseStatGreaterThan
-  // Solution code here...
   const result = arr.filter((value, index, array) => { // we want to filter the results of value, index, and array
     // console.log (value, index, array);
     if (value.baseStat > minBaseStat) return true; // if the first value.baseStat is greater than the minBaseStat we return as true. If it is not greater than we return false
@@ -154,7 +163,6 @@ For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 
 ------------------------------------------------------------------------------------------------ */
 
 const getStatName = (arr, minBaseStat) => {
-  // Solution code here...
   const output1 = arr.filter((value) => {
     if (value.baseStat > minBaseStat) return true;
     return false;
@@ -213,7 +221,6 @@ const characters = [
 ];
 
 const getCharactersWithoutChildren = (arr) => {
-  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -225,7 +232,6 @@ For example: evenOddNumericValues(['Gregor', 2, 4, 1]) returns ['even', 'even', 
 ------------------------------------------------------------------------------------------------ */
 
 const evenOddNumericValues = (arr) => {
-  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------

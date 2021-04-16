@@ -12,18 +12,7 @@ Push each updated animal string into the new array. Return the new array.
 HINT: Look at the tests to see how the callback functions are used.
 
 ------------------------------------------------------------------------------------------------ */
-// describe('Testing challenge 1', () => {
-//   test('It should return an array of uppercase animal names', () => {
-//     const arr = ['BeAr', 'lIon'];
-//     expect(updateAnimal(arr, upper)[0]).toStrictEqual('BEAR');
-//     expect(updateAnimal(arr, upper)[1]).toStrictEqual('LION');
-//   });
-//   test('It should return an array of lowercase animal names', () => {
-//     const arr = ['BeAr', 'lIon'];
-//     expect(updateAnimal(arr, lower)[0]).toStrictEqual('bear');
-//     expect(updateAnimal(arr, lower)[1]).toStrictEqual('lion');
-//   });
-// });
+
 
 function upper(str) { // we create a function that is upper (str)
   return str.toUpperCase(); // returning str toUpperCase 
@@ -34,12 +23,10 @@ function lower(str) { // we create a function that is lower (str)
 }
 
 const updateAnimal = (arr, callback) => {// we are taking the arr and callingback that from the other functions
-  // Solution code here...
   const newArr = [];// a new array is equal to the empy array
   arr.forEach(each => newArr.push(callback(each))); // for each part of newArr we push the callback to each.
   return newArr;
 };
-// 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -54,7 +41,6 @@ describe('Testing challenge 2', () => {
 });
 
 const sortNames = (arr) => { // sortNames is equal to an array
-  // Solution code here...
   const result = arr.sort(); //we are saying that the result of the array needs to be sorted
   return result;
 };
@@ -89,7 +75,6 @@ HINT: Do it with a custom sort callback, not with using `.reverse()`. ;)
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
-  // Solution code here...
   arr.sort((a,b) => {return b - a;});
   return arr;
 };
@@ -112,7 +97,6 @@ describe('Testing challenge 5', () => {
 });
 
 const alphabetize = (arr) => { // we pull the value of alphabetize to = the array and create a function
-  // Solution code here...
   arr.sort(); // the array then sorts the items that are within the area 
   return arr;
 };
@@ -146,7 +130,6 @@ Here is an example of the input:
 // });
 
 const sortByPrice = (arr) => {
-  // Solution code here...
   function comparing(left, right){
     if(left.price > right.price){
       return 1;
@@ -169,7 +152,6 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetizeBetter = (arr) => {
-  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -179,7 +161,6 @@ Write a function named sortByLength that takes in an array of strings and return
 ------------------------------------------------------------------------------------------------ */
 
 const sortByLength = (arr) => {
-  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -191,7 +172,6 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 ------------------------------------------------------------------------------------------------ */
 
 const sortNumbersByLength = (arr) => {
-  // Solution code here...
 };
 
 /*-----------------------------------------------------------------------------------------------
@@ -213,7 +193,6 @@ const people = [
 ];
 
 const sortPeople = (arr) => {
-  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -227,7 +206,6 @@ If two people have the same full name, the younger one should come first. Do not
 ------------------------------------------------------------------------------------------------ */
 
 const sortPeopleBetter = (arr) => {
-  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -253,7 +231,6 @@ const meetings = [
 ];
 
 const sortMeetingsByDay = (arr) => {
-  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -267,7 +244,6 @@ You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
 ------------------------------------------------------------------------------------------------ */
 
 const sortSchedule = (arr) => {
-  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
