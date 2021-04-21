@@ -12,4 +12,4 @@
 
 ## Solution
 
-![Solution Code](Assets/Code_Challenge_02_WhiteBoard_1.jpg)
+![Solution Code](../Assets/Code_Challenge_02_WhiteBoard_1.jpg)
