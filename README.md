@@ -7,7 +7,7 @@
 
 - Challenge 3: [Array Binary Search](https://github.com/JTaisey389/data-structures-and-algorithms.md/actions/workflows/javascript-tests.yml)
 
-- Challenge 4: []()
+- Challenge 4: [Linked List](https://github.com/JTaisey389/data-structures-and-algorithms.md/actions)
 - Challenge 5: []()
 - Challenge 6: []()
 - Challenge 7: []()
