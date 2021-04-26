@@ -2,6 +2,9 @@
 
 - Create a linked list that will add, remove or show a value within the list.
 
+## Pull Request
+https://github.com/JTaisey389/data-structures-and-algorithms.md/pull/23
+
 ## Challenge Description
 
 - Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.
@@ -18,7 +21,5 @@ Be sure to follow your language/frameworks standard naming conventions (e.g. C# 
 - With the use of Next this code challenge presents a way to look at the next value on the linked list. My approach is that we have to let a few numericals equal to a value that if it returns a true then we can move one. For each step there has to be a comparision operator to check and see if the value matches the test result. Additionally if the value returns true the linked list can traverse to the second value. 
 
 ## Solution
-
-![Solution Code](../Assets/Code_Challenge_Linked _List.jpg)
 
 ![Solution](../Assets/Code_Challenge_Linked _List.jpg)
