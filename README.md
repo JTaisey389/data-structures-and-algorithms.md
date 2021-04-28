@@ -13,7 +13,7 @@
 
 - Challenge 6: []()
 
-- Challenge 7: []()
+- Challenge 7: [Linked List Kth](https://github.com/JTaisey389/data-structures-and-algorithms.md/pull/25)
 
 - Challenge 8: []()
 
