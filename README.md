@@ -15,6 +15,6 @@
 
 - Challenge 7: [Linked List Kth](https://github.com/JTaisey389/data-structures-and-algorithms.md/pull/25)
 
-- Challenge 8: []()
+- Challenge 8: [Zipped Node](https://github.com/JTaisey389/data-structures-and-algorithms.md/tree/main/javascript/code-challenges/Linked-List/LLZip)
 
 - Challenge 9: []()
