@@ -8,7 +8,7 @@ describe('===Test for Queueing===', () => {
     expect(queue.front).toEqual(null);
   });
 
-  it('should add a Node to the queue', () => {S
+  it('should add a Node to the queue', () => {
     let queue = new Queue;
     let first = 23;
 

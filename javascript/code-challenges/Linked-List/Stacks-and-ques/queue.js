@@ -1,4 +1,4 @@
-'use strick'
+'use strict'
 
 class Queue {
   constructor(){
@@ -6,10 +6,10 @@ class Queue {
     this.next = null;
   }
   enqueue(value) { // add an item in the queue 
-  this[this.length] = value;
-  if(!this.next) this.next = this[this.length];
-  this.length++;
-  return this;
+    this[this.length] = value;
+    if(!this.next) this.next = this[this.length];
+    this.length++;
+    return this;
   }
   dequeue() { // remove an item in the queue
     let remove = this.next
@@ -17,14 +17,14 @@ class Queue {
     delete this [this.next]
     this.length--
     this.next = remove + 1
-    if(!this.length === 0) this.next = null
+    if(this.length === 0) this.next = null
     return result
   }
   peek(){ // take a look at how long the queue is, or it's starting value
     return this[this.next]
   }
   isEmpty(){
-    if(!this.length === 0) return true
+    if(this.length === 0) return true
     return false
   } 
 }
