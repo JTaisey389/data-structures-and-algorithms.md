@@ -31,15 +31,15 @@ Stack.prototype.isEmpty = function(){
   return false
 }
 
-module.exports = Stack
-console.log('empty stack', stack);
-console.log('stack with 1 item', stack.push('first'));
-console.log('stack with 2 items', stack.push('second'));
-console.log('stack with 3 items', stack.push('third'));
+// module.exports = Stack
+// console.log('empty stack', stack);
+// console.log('stack with 1 item', stack.push('first'));
+// console.log('stack with 2 items', stack.push('second'));
+// console.log('stack with 3 items', stack.push('third'));
 
-console.log('popped off the stack', stack.pop('chopy chopy third'))
-console.log('popped off the stack 1 item', stack.pop('chopy chopy second'))
-console.log('popped off the stack 1 item', stack.pop('chopy chopy third'))
+// console.log('popped off the stack', stack.pop('chopy chopy third'))
+// console.log('popped off the stack 1 item', stack.pop('chopy chopy second'))
+// console.log('popped off the stack 1 item', stack.pop('chopy chopy third'))
 // class Stack() {
 //   constructor(){
 //     this.length = 0;

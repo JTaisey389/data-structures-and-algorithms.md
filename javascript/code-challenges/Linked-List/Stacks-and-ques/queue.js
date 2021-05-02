@@ -31,10 +31,10 @@ class Queue {
 
 module.exports = Queue
 
-queue.enqueue(10);
+// queue.enqueue(10);
 
-console.log('empty queue', queue);
-console.log('enqueue first', queue.enqueue(1));
-console.log('enqueue second', queue.enqueue(2));
-console.log('enqueue third', queue.enqueue(3));
+// console.log('empty queue', queue);
+// console.log('enqueue first', queue.enqueue(1));
+// console.log('enqueue second', queue.enqueue(2));
+// console.log('enqueue third', queue.enqueue(3));
 
