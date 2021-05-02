@@ -2,12 +2,12 @@
 
 class Queue {
   constructor(){
-    this.length = 0; // this length property is used to house the length and is used as a way to enqueue/dequeue
     this.next = null;
+    this.length = 0; // this length property is used to house the length and is used as a way to enqueue/dequeue
   }
   enqueue(value) { // add an item in the queue 
     this[this.length] = value;
-    if(!this.next) this.next = this[this.length];
+    if(!this.next) this.next = 0;
     this.length++;
     return this;
   }

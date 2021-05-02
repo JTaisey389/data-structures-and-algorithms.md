@@ -11,6 +11,7 @@ describe('===Test for Queueing===', () => {
   it('should add a Node to the queue', () => {
     let queue = new Queue;
     let first = 23;
+    let value = value;
 
     queue.enqueue(first);
     expect(queue.front.value).toEqual(23);
@@ -20,6 +21,8 @@ describe('===Test for Queueing===', () => {
     let queue = new Queue;
     let first = 23;
     let second = 31;
+    let value = value;
+    let next = next;
 
     queue.enqueue(first);
     expect(queue.front.value).toEqual(23);
@@ -37,7 +40,7 @@ describe('===Test for Queueing===', () => {
     queue.enqueue(third);
     queue.dequeue();
     queue.dequeue();
-    exprec(queue.peek()).toEqual(third);
+    expect(queue.peek()).toEqual(third);
   })
   it('should return the value of the front of the  Queue', () => {
     let queue = new Queue;
@@ -46,7 +49,7 @@ describe('===Test for Queueing===', () => {
 
     queue.enqueue(first);
     queue.enqueue(second);
-    exprec(queue.peek()).toEqual(first);
+    expect(queue.peek()).toEqual(first);
   })
   it('should return the values of all the numbers in the Queue', () => {
     let queue = new Queue;

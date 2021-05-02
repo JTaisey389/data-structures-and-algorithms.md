@@ -35,7 +35,7 @@ describe('===Test for Stacks===', () => {
     stack.push(third);
     stack.pop();
     stack.pop();
-    exprec(stack.peek()).toEqual(first);
+    expect(stack.peek()).toEqual(first);
   })
   it('should return the value of the top of the  Stack', () => {
     let stack = new Stack;
@@ -44,7 +44,7 @@ describe('===Test for Stacks===', () => {
 
     stack.push(first);
     stack.push(second);
-    exprec(stack.peek()).toEqual(second);
+    expect(stack.peek()).toEqual(second);
   })
   it('should return the values of all the numbers in the Stack', () => {
     let stack = new Stack;
