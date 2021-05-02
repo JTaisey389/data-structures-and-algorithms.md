@@ -31,7 +31,7 @@ Stack.prototype.isEmpty = function(){
   return false
 }
 
-// module.exports = Stack
+module.exports = Stack
 // console.log('empty stack', stack);
 // console.log('stack with 1 item', stack.push('first'));
 // console.log('stack with 2 items', stack.push('second'));

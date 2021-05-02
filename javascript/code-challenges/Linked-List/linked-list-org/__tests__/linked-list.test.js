@@ -2,7 +2,7 @@
 
 const LL = require('../Lib/ll.js');
 
-describe('Test for Linked List', () => {
+xdescribe('Test for Linked List', () => {
   it('should create an empty LL on instantiation', () => {
     let list = new LL();
     expect(list.head).toEqual(null);
