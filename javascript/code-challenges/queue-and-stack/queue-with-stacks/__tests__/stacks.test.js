@@ -1,34 +1,34 @@
 'use strict';
 
-const Stack = require('../stack');
+const PseudoQueue = require('../Pseudo-queue');
 
 describe('===Test for Stacks===', () => {
-  it('should create a new Stack', () => {
-    let stack = new Stack;
+  it('should create a new PseudoQueue', () => {
+    let stack = new PseudoQueue;
     expect(stack.top).toEqual(null);
   })
   it('should add a Node to the stack', () => {
-    let stack = new Stack;
-    let first = 23;
+    let stack = new PseudoQueue;
+    let first = 12;
 
     stack.push(first);
-    expect(stack.top.value).toEqual(23);
+    expect(stack.top.value).toEqual(12);
   })
-  it('should add multiple nodes to the  Stack', () => {
-    let stack = new Stack;
-    let first = 23;
-    let second = 31;
+  it('should add multiple nodes to the  PseudoQueue', () => {
+    let stack = new PseudoQueue;
+    let first = 12;
+    let second = 30;
 
     stack.push(first);
-    expect(stack.top.value).toEqual(23);
+    expect(stack.top.value).toEqual(12);
     stack.push(second);
-    expect(stack.top.next).toEqual({'next': null, 'value': 23});
+    expect(stack.top.next).toEqual({'next': null, 'value': 30});
   })
-  it('should remove multiple nodes from the Stack', () => {
-    let stack = new Stack;
-    let first = 25;
-    let second = 31;
-    let third = 40;
+  it('should remove multiple nodes from the PseudoQueue', () => {
+    let stack = new PseudoQueue;
+    let first = 12;
+    let second = 30;
+    let third = 35;
 
     stack.push(first);
     stack.push(second);
@@ -37,24 +37,24 @@ describe('===Test for Stacks===', () => {
     stack.pop();
     expect(stack.peek()).toEqual(first);
   })
-  it('should return the value of the top of the  Stack', () => {
-    let stack = new Stack;
-    let first = 23;
-    let second = 31;
+  it('should return the value of the top of the  PseudoQueue', () => {
+    let stack = new PseudoQueue;
+    let first = 12;
+    let second = 30;
 
     stack.push(first);
     stack.push(second);
     expect(stack.peek()).toEqual(second);
   })
-  it('should return the values of all the numbers in the Stack', () => {
-    let stack = new Stack;
-    let returnVal = '{ 31 } => { 23 } => NULL';
-    stack.push(23);
-    stack.push(31);
+  it('should return the values of all the numbers in the PseudoQueue', () => {
+    let stack = new PseudoQueue;
+    let returnVal = '{ 30 } => { 12 } => NULL';
+    stack.push(12);
+    stack.push(30);
     expect(stack.print).toEqual(returnVal);
   })
-  it('should return null when trying to remove a node from an empty Stack', () => {
-    let stack = new Stack;
+  it('should return null when trying to remove a node from an empty PseudoQueue', () => {
+    let stack = new PseudoQueue;
     console.log(`check empty ${stack.pop()}`);
     expect(stack.pop).toEqual(null);
   })

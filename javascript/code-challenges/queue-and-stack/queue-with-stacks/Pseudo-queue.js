@@ -1,9 +1,9 @@
 'use strict'
 
-class Queue {
+class PseudoQueue {
   constructor(){
     this.next = null;
-    this.length = 0; // this length property is used to house the length and is used as a way to enqueue/dequeue
+    this.length = 0; 
   }
   enqueue(value) { // add an item in the queue 
     this[this.length] = value;
@@ -26,15 +26,24 @@ class Queue {
   isEmpty(){
     if(this.length === 0) return true
     return false
-  } 
+  }
+  // Stack Pseudo Code
+  // constructor(){
+  //   this.length = 0; 
+  // }
+  push(){
+    this[this.length++] = value;
+    return this;
+  }
+  pop(){
+    if(this.length === 0) return 'empty stack';
+  
+    const result = this[--this.length];
+    delete this[this.length];
+    return result;
+  }
 }
 
-module.exports = Queue
+module.exports = PseudoQueue
 
-// queue.enqueue(10);
-
-// console.log('empty queue', queue);
-// console.log('enqueue first', queue.enqueue(1));
-// console.log('enqueue second', queue.enqueue(2));
-// console.log('enqueue third', queue.enqueue(3));
 
