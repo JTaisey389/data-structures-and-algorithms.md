@@ -9,7 +9,7 @@ Use the characters data below for all of the challenges except challenge 2 and 3
 Write a function named sortByChildren that sorts the characters below by the number of children in each house (fewest to most). If a house has the same number of children, sort alphabetically by house name.
 
 ------------------------------------------------------------------------------------------------ */
-// describe('Testing challenge 1', () => {
+// xdescribe('Testing challenge 1', () => {
 //   test('It should sort the characters by number of children', () => {
 //     expect(sortByChildren(characters)[0].name).toStrictEqual('Euron');
 //     expect(sortByChildren(characters)[0].children.length).toStrictEqual(0);
@@ -88,7 +88,7 @@ Write a function named getCourseKeys that takes in the courseInfo object and ret
 
 For example: (['name', 'duration', 'topics', 'finalExam']).
 ------------------------------------------------------------------------------------------------ */
-describe('Testing challenge 2', () => {
+xdescribe('Testing challenge 2', () => {
   test('It should return the keys from an object', () => {
     expect(getCourseKeys(courseInfo)).toStrictEqual(['name', 'duration', 'topics', 'finalExam']);
   });
@@ -121,7 +121,7 @@ Write a function named checkValues that takes in an object and a value and retur
 
 
 ------------------------------------------------------------------------------------------------ */
-// describe('Testing challenge 3', () => {
+// xdescribe('Testing challenge 3', () => {
 //   test('It should return true if the value is in the object', () => {
 //     expect(checkValues({ class: '301' }, '301')).toBe(true);
 //   });
@@ -154,7 +154,7 @@ HR has asked you to change the data to make it easier to print so that it looks 
 ]
 
 ------------------------------------------------------------------------------------------------ */
-// describe('Testing challenge 4', () => {
+// xdescribe('Testing challenge 4', () => {
 //   test('It should return an an array of names and numbers', () => {
 //     const startingObj = {
 //       'Grace Hopper': '222-303-5938',
@@ -179,7 +179,7 @@ CHALLENGE 5
 
 Write a function named getHouses that returns a new array containing the names of all of the houses in the data set.
 ------------------------------------------------------------------------------------------------ */
-// describe('Testing challenge 5', () => {
+// xdescribe('Testing challenge 5', () => {
 //   test('It should return an array of the names of the houses', () => {
 //     expect(getHouses(characters)[0]).toStrictEqual('Greyjoy');
 //     expect(getHouses(characters).length).toStrictEqual(7);
@@ -204,7 +204,7 @@ For example:
 hasChildrenValues(characters, 'Cersei') will return true
 hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
-// describe('Testing challenge 6', () => {
+// xdescribe('Testing challenge 6', () => {
 //   test('It should return true for characters that have children', () => {
 //     expect(hasChildrenValues(characters, 'Daenarys')).toBeTruthy();
 //   });
@@ -295,14 +295,14 @@ Run your tests from the console: jest challenges-06.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-describe("Testing challenge 1", () => {
+xdescribe("Testing challenge 1", () => {
   test("It should sort the characters by number of children", () => {
     expect(sortByChildren(characters)[0].name).toStrictEqual("Euron");
     expect(sortByChildren(characters)[0].children.length).toStrictEqual(0);
   });
 });
 
-describe("Testing challenge 2", () => {
+xdescribe("Testing challenge 2", () => {
   test("It should return the keys from an object", () => {
     expect(getCourseKeys(courseInfo)).toStrictEqual([
       "name",
@@ -313,7 +313,7 @@ describe("Testing challenge 2", () => {
   });
 });
 
-describe("Testing challenge 3", () => {
+xdescribe("Testing challenge 3", () => {
   test("It should return true if the value is in the object", () => {
     expect(checkValues({ class: "301" }, "301")).toBe(true);
   });
@@ -323,7 +323,7 @@ describe("Testing challenge 3", () => {
   });
 });
 
-describe("Testing challenge 4", () => {
+xdescribe("Testing challenge 4", () => {
   test("It should return an an array of names and numbers", () => {
     const startingObj = {
       "Grace Hopper": "222-303-5938",
@@ -337,14 +337,14 @@ describe("Testing challenge 4", () => {
   });
 });
 
-describe("Testing challenge 5", () => {
+xdescribe("Testing challenge 5", () => {
   test("It should return an array of the names of the houses", () => {
     expect(getHouses(characters)[0]).toStrictEqual("Greyjoy");
     expect(getHouses(characters).length).toStrictEqual(7);
   });
 });
 
-describe("Testing challenge 6", () => {
+xdescribe("Testing challenge 6", () => {
   test("It should return true for characters that have children", () => {
     expect(hasChildrenValues(characters, "Daenarys")).toBeTruthy();
   });

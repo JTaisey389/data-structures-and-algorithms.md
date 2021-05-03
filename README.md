@@ -17,4 +17,28 @@
 
 - Challenge 8: [Zipped Node](https://github.com/JTaisey389/data-structures-and-algorithms.md/tree/main/javascript/code-challenges/Linked-List/LLZip)
 
-- Challenge 9: []()
+- Challenge 11: [Psuedo Stack's & Queues](https://github.com/JTaisey389/data-structures-and-algorithms.md/tree/main/javascript/code-challenges/queue-and-stack/queue-with-stacks)
+
+- Challenge 12: []()
+
+- Challenge 13: []()
+
+- Challenge 14: []()
+
+- Challenge 15: []()
+
+- Challenge 16: []()
+
+- Challenge 17: []()
+
+- Challenge 18: []()
+
+- Challenge 19: []()
+
+- Challenge 20: []()
+
+- Challenge 21: []()
+
+- Challenge 22: []()
+
+- Challenge 23: []()
