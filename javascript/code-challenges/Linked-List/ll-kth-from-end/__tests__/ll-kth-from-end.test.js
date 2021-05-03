@@ -2,7 +2,7 @@
 
 const LL = require('javascript/Linked-List/ll-kth-from-end/ll-kth-from-end.js');
 
-describe('****Linked List Tests***', () => {
+xdescribe('****Linked List Tests***', () => {
 it('should add a kth value on the node, and return a null if a number does not match', () => {
     let list = new LL;
     let first = 64;

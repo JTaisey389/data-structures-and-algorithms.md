@@ -36,4 +36,4 @@
 
 ## Solution
 
-![Solution Code](Assets/Code_Challenge_10_Stack_&_Queue.jpg)
+![Solution Code](/Assets/Code_Challenge_10_Stack_&_Queue.jpg)
