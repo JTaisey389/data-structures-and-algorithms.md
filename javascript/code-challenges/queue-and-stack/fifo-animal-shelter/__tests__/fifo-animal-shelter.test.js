@@ -1,61 +1,46 @@
+
 'use strict';
 
-const PseudoQueue = require('../Pseudo-queue');
 
-describe('===Test for Stacks===', () => {
-  it('should create a new PseudoQueue', () => {
-    let stack = new PseudoQueue;
-    expect(stack.top).toEqual(null);
-  })
-  it('should add a Node to the stack', () => {
-    let stack = new PseudoQueue;
-    let first = 12;
+const {AnimalShelter} = require('javascript/code-challenges/queue-and-stack/fifo-animal-shelter/fifo-animal-shelter.js');
+const {AlltheFloofs} = require('javascript/code-challenges/queue-and-stack/fifo-animal-shelter/fifo-animal-shelter.js');
 
-    stack.push(first);
-    expect(stack.top.value).toEqual(12);
-  })
-  it('should add multiple nodes to the  PseudoQueue', () => {
-    let stack = new PseudoQueue;
-    let first = 12;
-    let second = 30;
+let animalShelter = new AnimalShelter;
 
-    stack.push(first);
-    expect(stack.top.value).toEqual(12);
-    stack.push(second);
-    expect(stack.top.next).toEqual({'next': null, 'value': 30});
-  })
-  it('should remove multiple nodes from the PseudoQueue', () => {
-    let stack = new PseudoQueue;
-    let first = 12;
-    let second = 30;
-    let third = 35;
+let jameson = new AlltheFloofs('dog', 'Jameson');
+let bailey = new AlltheFloofs('dog', 'Bailey');
+let tux = new AlltheFloofs('cat', 'Tux');
+let tucker = new AlltheFloofs('dog', 'tucker');
 
-    stack.push(first);
-    stack.push(second);
-    stack.push(third);
-    stack.pop();
-    stack.pop();
-    expect(stack.peek()).toEqual(first);
-  })
-  it('should return the value of the top of the  PseudoQueue', () => {
-    let stack = new PseudoQueue;
-    let first = 12;
-    let second = 30;
+describe('====== Animal Shelter Test==========', () => {
+  it('should enqueue a new floof to the shelter', () => {
+    animalShelter.enqueue(jameson);
+    expect(animalShelter.cats.peek()).toBe(jameson);
+  });
 
-    stack.push(first);
-    stack.push(second);
-    expect(stack.peek()).toEqual(second);
-  })
-  it('should return the values of all the numbers in the PseudoQueue', () => {
-    let stack = new PseudoQueue;
-    let returnVal = '{ 30 } => { 12 } => NULL';
-    stack.push(12);
-    stack.push(30);
-    expect(stack.print).toEqual(returnVal);
-  })
-  it('should return null when trying to remove a node from an empty PseudoQueue', () => {
-    let stack = new PseudoQueue;
-    console.log(`check empty ${stack.pop()}`);
-    expect(stack.pop).toEqual(null);
-  })
-})
+  it('should enqueue multiple floofs to the shelter', () => {
+    animalShelter.enqueue(bailey);
+    animalShelter.enqueue(tux);
+    animalShelter.enqueue(tucker);
+    expect(animalShelter.cats.peek()).toBe(bailey);
+    expect(animalShelter.dogs.peek()).toBe(tux);
+  });
+
+  it('should dequeue an floof from the shelter', () => {
+    expect(animalShelter.dequeue('cat')).toBe(tux);
+  });
+
+  it('should dequeue multiple floofs from the shelter', () => {
+    animalShelter.dequeue('dog');
+    expect(animalShelter.dequeue('dog')).toBe(tucker);
+  });
+
+  it('should return error if shelter is empty', () => {
+    expect(animalShelter.dequeue('dog')).toBe('empty queue');
+  });
+
+  it('should return error if preference is not dog or cat', () => {
+    expect(animalShelter.dequeue('not a floof')).toBe('only dogs and cats available');
+  });
+
+});
