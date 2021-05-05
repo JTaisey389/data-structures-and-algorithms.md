@@ -19,7 +19,7 @@
 
 - Challenge 11: [Psuedo Stack's & Queues](https://github.com/JTaisey389/data-structures-and-algorithms.md/tree/main/javascript/code-challenges/queue-and-stack/queue-with-stacks)
 
-- Challenge 12: []()
+- Challenge 12: [multi-bracket-validation](https://github.com/JTaisey389/data-structures-and-algorithms.md/pull/37)
 
 - Challenge 13: []()
 
