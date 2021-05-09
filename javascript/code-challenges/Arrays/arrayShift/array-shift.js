@@ -12,10 +12,10 @@ function insertShiftArray (arr, value) {
     } else if ( i === middle ) {
       newValues.push(value);
     } else {
-      newValues.push(arr[i-1])
+      newValues.push(arr[i-1]);
     }
   }
-  return newValues 
+  return newValues;
 }
 
 module.exports = insertShiftArray;

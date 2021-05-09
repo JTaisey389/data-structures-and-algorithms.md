@@ -9,29 +9,28 @@ function Stack() {
 Stack.prototype.push = function(value) { // We are going to push value to a stack
   this[this.length++] = value; // this is a key value pair 
   return this;
-}
+};
 
 Stack.prototype.pop = function(){
   if(this.length === 0) return 'empty stack';
-  
   const result = this[--this.length];
   delete this[this.length];
-  return result
-}
+  return result;
+};
 // let stack = new Stack();
 
 Stack.prototype.peek = function(){
   //show me the top item in the stack, but don't remove it like pop
-  if (this.length === 0) return false
+  if (this.length === 0) return false;
   return this[this.length-1];
-}
+};
 
 Stack.prototype.isEmpty = function(){
-  if(this.length === 0) return true
-  return false
-}
+  if(this.length === 0) return true;
+  return false;
+};
 
-module.exports = Stack
+module.exports = Stack;
 // console.log('empty stack', stack);
 // console.log('stack with 1 item', stack.push('first'));
 // console.log('stack with 2 items', stack.push('second'));

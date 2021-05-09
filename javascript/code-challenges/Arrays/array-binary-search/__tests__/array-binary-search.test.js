@@ -2,7 +2,7 @@
 'use strict';
 
 // Require our linked list implementation
-const BinarySearch = require('../array-binary-search.js');
+const BinarySearch = require('../array-binary-search');
 
 // TEST CHALLENGE DAY 03
 describe('Testing challenge Array-Binary-Shift', () => {
@@ -16,30 +16,3 @@ describe('Testing challenge Array-Binary-Shift', () => {
   });
 });
 
-
-// TEST CHALLENGE DAY 04
-xdescribe('Testing challenge Array-Binary-Shift', () => {
-  test('It should return an interger that matches the value within the arrays', () => {
-    expect(LinkedLilst([4,8,15,16,23,42], 15)).toStrictEqual([-1]);
-    expect(LinkedLilst([11,22,33,44,55,66,77], 90)).toStrictEqual([-1]);
-    expect(LinkedLilst([1,2,3,5,6,7],4)).toStrictEqual([-1]);
-  });
-});
-
-// TEST CHALLENGE DAY 05
-xdescribe('Testing challenge Array-Binary-Shift', () => {
-  test('It should return an interger that matches the value within the arrays', () => {
-    expect(LinkedLilst([4,8,15,16,23,42], 15)).toStrictEqual([-1]);
-    expect(LinkedLilst([11,22,33,44,55,66,77], 90)).toStrictEqual([-1]);
-    expect(LinkedLilst([1,2,3,5,6,7],4)).toStrictEqual([-1]);
-  });
-});
-
-// TEST CHALLENGE DAY 06
-xdescribe('Testing challenge Array-Binary-Shift', () => {
-  test('It should return an interger that matches the value within the arrays', () => {
-    expect(LinkedLilst([4,8,15,16,23,42], 15)).toStrictEqual([-1]);
-    expect(LinkedLilst([11,22,33,44,55,66,77], 90)).toStrictEqual([-1]);
-    expect(LinkedLilst([1,2,3,5,6,7],4)).toStrictEqual([-1]);
-  });
-});
