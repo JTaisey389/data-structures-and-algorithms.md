@@ -3,7 +3,8 @@
 - Create a linked list that will add, remove or show a value within the list.
 
 ## Pull Request
-https://github.com/JTaisey389/data-structures-and-algorithms.md/pull/23
+
+<https://github.com/JTaisey389/data-structures-and-algorithms.md/pull/23>
 
 ## Challenge Description
 
@@ -18,7 +19,7 @@ Be sure to follow your language/frameworks standard naming conventions (e.g. C# 
 
 ## Approach & Efficiency
 
-- With the use of Next this code challenge presents a way to look at the next value on the linked list. My approach is that we have to let a few numericals equal to a value that if it returns a true then we can move one. For each step there has to be a comparision operator to check and see if the value matches the test result. Additionally if the value returns true the linked list can traverse to the second value. 
+- With the use of Next this code challenge presents a way to look at the next value on the linked list. My approach is that we have to let a few numericals equal to a value that if it returns a true then we can move one. For each step there has to be a comparision operator to check and see if the value matches the test result. Additionally if the value returns true the linked list can traverse to the second value.
 
 ## Solution
 

@@ -1,30 +1,38 @@
-  'use strict';
+'use strict';
 
-  const { Queue } = require('javascript/code-challenges/queue-and-stack/Stacks-and-ques/queue.js')
+const Queue = require('../fifo-animal-shelter/queue.js');
 
-  class AnimalShelter {
-    constructor() {
-      this.cats = new Queue();
-      this.dogs = new Queue();
+class AlltheFloofs {
+  constructor(type, name){// this.type = this.type pass in type
+    this.type = type;
+    this.name = name;
+  }
+}
+class AnimalShelter {
+  constructor() {
+    this.dogs = new Queue();
+    this.cats = new Queue();
+  }
+  enqueue(companion) {
+    if(companion.type !== 'dog' && companion.type !== 'cat')return null;
+    if(companion.type === 'dog'){
+      this.dogs.enqueue(companion);
+      return this;
     }
-    enqueue(companion) {
-      if (companion.match === 'dog') {
-        return this.dogs.enqueue(companion);
-      } else if (companion.match === 'cat'){
-        return this.cats.enqueue(companion);
-      }
-    }
-    dequeue(floofs) {
-      if (floofs === 'dogs') return this.dogs.dequeue();
-      if (floofs === 'cat') return this.cats.dequeue();
-      return('only the best floofs are available');
+    if(companion.type === 'cat'){
+      this.cats.enqueue(companion);
+      return this;
     }
   }
-
-  class AlltheFloofs {
-    constructor(match, name){
-      this.match = match;
-      this.name = name;
+  dequeue(floofs) {
+    if(floofs.type !== 'dog' && floofs.type !== 'cat')return null;
+    if(floofs.type === 'dog'){
+      this.dogs.dequeue(floofs);
+    } else {
+      this.cats.dequeue(floofs);
     }
   }
-  module.exports = { AnimalShelter, AlltheFloofs};
+}
+
+
+module.exports = { AlltheFloofs, AnimalShelter };
