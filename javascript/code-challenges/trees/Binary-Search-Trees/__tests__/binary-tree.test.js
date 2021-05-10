@@ -53,7 +53,7 @@ xdescribe('------Test for Trees------', () => {
   });
 });
 
-describe('------Test for Trees Part Dux------', () => {
+xdescribe('------Test for Trees Part Dux------', () => {
   it('Should create a new Binary Search Tree', () => {
     const tree = new BinarySearchTree;
     expect(tree.preOrder()).toEqual(null);
