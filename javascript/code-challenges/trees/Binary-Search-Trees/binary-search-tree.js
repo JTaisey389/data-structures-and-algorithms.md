@@ -1,7 +1,7 @@
 /* eslint-disable no-constant-condition */
 'use strict';
 
-const Node = require('../Binary-Search-Trees/node');
+const Node = require('./node');
 
 class BinarySearchTree{
   constructor(root = null){
@@ -44,7 +44,7 @@ class BinarySearchTree{
   }
   preOrder(){
     //Data first -> Left -> Right
-    if(!this.root) return null;
+    // if(!this.root) return null;
     let results =[];
     let _walk = node => { // read the data first in order
       results.push(node.val); //go left -> if node.left is null, we are at a leaf
