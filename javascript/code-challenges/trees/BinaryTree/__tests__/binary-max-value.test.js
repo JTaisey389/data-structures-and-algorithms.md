@@ -4,7 +4,7 @@ const Node = require('../node');
 const BinaryTree = require('../binary-tree');
 
 
-describe('------Test for Trees------', () => {
+describe('------Test for Max-Values-Trees------', () => {
   it('Should create a new Binary Tree', () => {
     const tree = new BinaryTree;
     expect(tree.preOrder()).toEqual(null);
