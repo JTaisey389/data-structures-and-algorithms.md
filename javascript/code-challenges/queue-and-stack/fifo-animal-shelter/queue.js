@@ -9,13 +9,15 @@ class Queue {
     this.last = null;
   }
   enqueue(value) { // add an item in the queue
-    let newNode = new Node(value);
+    // let value = new Node(value);
+
     if(!this.first){
-      this.first = newNode;
-      this.last = newNode;
+      this.first = value;
+      this.last = value;
+      this.length++;
     } else{
-      this.last.next = newNode;
-      this.last = newNode;
+      this.last.next = value;
+      this.last = value;
       this.length++;
     }
   }

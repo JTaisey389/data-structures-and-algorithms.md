@@ -21,13 +21,13 @@
 
 - Challenge 12: [multi-bracket-validation](https://github.com/JTaisey389/data-structures-and-algorithms.md/pull/37)
 
-- Challenge 13: []()
+- Challenge 13: [Fifo-Animal-Shelter](https://github.com/JTaisey389/data-structures-and-algorithms.md/tree/main/javascript/code-challenges/queue-and-stack/fifo-animal-shelter)
 
-- Challenge 14: []()
+- Challenge 14: [Queue with Stacks](https://github.com/JTaisey389/data-structures-and-algorithms.md/tree/main/javascript/code-challenges/queue-and-stack/queue-with-stacks)
 
-- Challenge 15: []()
+- Challenge 15: [Tree's](https://github.com/JTaisey389/data-structures-and-algorithms.md/tree/main/javascript/code-challenges/trees/Binary-Search-Trees)
 
-- Challenge 16: []()
+- Challenge 16: [Binary Tree MaxVal](https://github.com/JTaisey389/data-structures-and-algorithms.md/tree/main/javascript/code-challenges/trees/BinaryTree)
 
 - Challenge 17: []()
 

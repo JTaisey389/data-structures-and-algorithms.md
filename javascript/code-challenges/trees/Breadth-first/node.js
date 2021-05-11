@@ -9,3 +9,4 @@ class Node { // construct the values for the BST and BT
 }
 
 module.exports = Node;
+
