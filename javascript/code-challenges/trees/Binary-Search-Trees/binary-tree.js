@@ -1,10 +1,10 @@
 'use strict';
 
-const BinarySearchTree = require('./binary-search-tree');
+// const BinarySearchTree = require('./binary-search-tree');
 
-class BinaryTree extends BinarySearchTree {}
+// class BinaryTree extends BinarySearchTree {}
 
-module.exports = BinaryTree;
+// module.exports = BinaryTree;
 
 // const Node = require('../Binary-Search-Trees/node');
 
