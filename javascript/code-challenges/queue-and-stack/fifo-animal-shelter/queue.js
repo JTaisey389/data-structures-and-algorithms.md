@@ -1,6 +1,6 @@
 'use strict';
 
-const Node = require('../../queue-and-stack/fifo-animal-shelter/node');
+
 class Queue {
   constructor(){
     this.next = null;
