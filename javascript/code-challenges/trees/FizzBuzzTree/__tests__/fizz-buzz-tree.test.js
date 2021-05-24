@@ -1,25 +1,25 @@
 'use strict';
 
-const fizzbuzz = require('../fizz-buzz-tree');
+const { KaryNode, KaryTree } = require('../fizz-buzz-tree')
 
 describe('testing fizzBuzzTree function', () => {
-  const tree = new fizzbuzz.Tree(3);
-  tree.root = new fizzbuzz.Node(1, tree.k);
-  tree.root.buzzword[0] = new fizzbuzz.Node(3, tree.k);
-  tree.root.buzzword[1] = new fizzbuzz.Node(5, tree.k);
-  tree.root.buzzword[2] = new fizzbuzz.Node(12, tree.k);
-  tree.root.buzzword[0].buzzword[0] = new fizzbuzz.Node(15, tree.k);
-  tree.root.buzzword[0].buzzword[1] = new fizzbuzz.Node(8, tree.k);
-  tree.root.buzzword[1].buzzword[0] = new fizzbuzz.Node(1, tree.k);
-  tree.root.buzzword[2].buzzword[0] = new fizzbuzz.Node(10, tree.k);
-  const fizzBuzzTree = fizzbuzz.fizzBuzz(tree);
+  var tree = new KaryTree(1);
+  tree.root.children.push(new KaryNode(3));
+  tree.root.children[0].parent = tree;
+  tree.root.children.push(new KaryNode(5));
+  tree.root.children[1].parent = tree;
+  tree.root.children.push(new KaryNode(7));
+  tree.root.children[2].parent = tree;
+  tree.root.children[0].children.push(new KaryNode(15));
+  tree.root.children[0].children[0].parent = tree.root.children[0];
+  tree.root.children[0].children.push(new KaryNode(30));
+  tree.root.children[0].children[1].parent = tree.root.children[0];
+  tree.fizzBuzzTree();
 
-  console.log('TEST======', new fizzbuzz.Tree(3));
-
-  it ('should change numbers divisible by 3 to Fizz', () => {
-    expect(fizzBuzzTree.root.buzzword[0]).toEqual('Fizz');
-    expect(fizzBuzzTree.root.buzzword[0].buzzword[0]).toEqual('Fizz');
+  it('It should replace values divisible by 3 with "Fizz"', () => {
+    expect(tree.root.children[0].value).toBe('Fizz');
   });
 });
+
 
 
