@@ -29,16 +29,16 @@
 
 - Challenge 16: [Binary Tree MaxVal](https://github.com/JTaisey389/data-structures-and-algorithms.md/tree/main/javascript/code-challenges/trees/BinaryTree)
 
-- Challenge 17: []()
+- Challenge 26: [PseudoCode](https://github.com/JTaisey389/data-structures-and-algorithms.md/tree/main/javascript/code-challenges/Pseudocode)
 
-- Challenge 18: []()
+- Challenge 27: []()
 
-- Challenge 19: []()
+- Challenge 28: []()
 
-- Challenge 20: []()
+- Challenge 29: []()
 
-- Challenge 21: []()
+- Challenge 30: []()
 
-- Challenge 22: []()
+- Challenge 31: []()
 
-- Challenge 23: []()
+- Challenge 32: []()
