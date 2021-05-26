@@ -33,7 +33,7 @@
 
 - Challenge 27: [MergeSort](https://github.com/JTaisey389/data-structures-and-algorithms.md/tree/main/javascript/code-challenges/Pseudocode/merge-sort)
 
-- Challenge 28: []()
+- Challenge 28: [QuickSort](https://github.com/JTaisey389/data-structures-and-algorithms.md/tree/main/javascript/code-challenges/Pseudocode/quickSort)
 
 - Challenge 29: []()
 
