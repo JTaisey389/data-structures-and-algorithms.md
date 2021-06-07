@@ -35,7 +35,7 @@
 
 - Challenge 28: [QuickSort](https://github.com/JTaisey389/data-structures-and-algorithms.md/tree/main/javascript/code-challenges/Pseudocode/quickSort)
 
-- Challenge 29: [HashTable]()
+- Challenge 29: [HashTable](https://github.com/JTaisey389/data-structures-and-algorithms.md/tree/main/javascript/code-challenges/Hashmaps/hash-tables)
 
 - Challenge 30: []()
 
