@@ -37,7 +37,7 @@
 
 - Challenge 29: [HashTable](https://github.com/JTaisey389/data-structures-and-algorithms.md/tree/main/javascript/code-challenges/Hashmaps/hash-tables)
 
-- Challenge 30: []()
+- Challenge 30: [Left-Join](https://github.com/JTaisey389/data-structures-and-algorithms.md/tree/main/javascript/code-challenges/Left-Join)
 
 - Challenge 31: []()
 
