@@ -30,39 +30,21 @@ hashThree.add('banana', 'idle');
 hashThree.add('grapes', 'follow');
 hashThree.add('pear', 'jam');
 
-
-
 describe('test for LeftJoin function', () => {
   it('should successfully join to hashmaps into a single hashmap with both sets of values', () => {
-    expect(leftJoin(hashOne, hashTwo)).toEqual([
-      ['wrath', 'anger', 'delight'],
-      ['diligent', 'employed', 'idle'],
-      ['guide', 'usher', 'follow'],
-      ['fond', 'enamored', 'averse'],
-      ['outfit', 'garb', null]
-    ]
-    );
+    expect(leftJoin(hashOne, hashTwo)).toContainEqual(['fond', 'enamored', 'averse']);
+    expect(leftJoin(hashOne, hashTwo)).toContainEqual(['wrath', 'anger', 'delight']);
+    expect(leftJoin(hashOne, hashTwo)).toContainEqual(['diligent', 'employed', 'idle']);
+    expect(leftJoin(hashOne, hashTwo)).toContainEqual(['outfit', 'garb', null]);
+    expect(leftJoin(hashOne, hashTwo)).toContainEqual(['guide', 'usher', 'follow']);
   });
-  // it('should successfully return data structure with two values for each key if the same table is passed twice', () => {
+  it('should successfully return data structure with null as third element in every array for two tables with no matching keys', () => {
+    // console.log(leftJoin(hashOne, hashThree));
 
-  //   expect(leftJoin(hashOne, hashOne)).toEqual([
-  //     ['wrath', 'anger', 'anger'],
-  //     ['diligent', 'employed', 'employed'],
-  //     ['guide', 'usher', 'usher'],
-  //     ['fond', 'enamored', 'enamored'],
-  //     ['outfit', 'garb', 'garb'],
-  //   ]);
-  // });
-
-  // it('should successfully return data structure with null as third element in every array for two tables with no matching keys', () => {
-  //   // console.log(leftJoin(hashOne, hashThree));
-
-  //   expect(leftJoin(hashOne, hashThree)).toEqual([
-  //     ['wrath', 'anger', null],
-  //     ['diligent', 'employed', null],
-  //     ['guide', 'usher', null],
-  //     ['fond', 'enamored', null],
-  //     ['outfit', 'garb', null],
-  //   ]);
-  // });
+    expect(leftJoin(hashOne, hashThree)).toContainEqual(['wrath', 'anger', null]);
+    expect(leftJoin(hashOne, hashThree)).toContainEqual(['diligent', 'employed', null]);
+    expect(leftJoin(hashOne, hashThree)).toContainEqual(['guide', 'usher', null]);
+    expect(leftJoin(hashOne, hashThree)).toContainEqual(['fond', 'enamored', null]);
+    expect(leftJoin(hashOne, hashThree)).toContainEqual(['outfit', 'garb', null]);
+  });
 });
